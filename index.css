@@ -1,0 +1,144 @@
+:root {
+  --Cream: hsl(30, 38%, 92%);
+  --DarkCyan: hsl(158, 36%, 37%);
+  --VeryDarkBlue: hsl(148, 21%, 14%);
+  --DarkGrayishBlue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+  --imgDesk: url("images/image-product-desktop.jpg");
+  --imgMob: url("images/image-product-mobile.jpg");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  border: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--Cream);
+  height: 100vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.card {
+  background-color: var(--White);
+  width: 500px;
+  height: 400px;
+  border-radius: 10px;
+  box-shadow: 20px 20px 30px #36080005;
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+}
+
+.image {
+  border-radius: 10px 0 0 10px;
+  width: 62%;
+  background-image: var(--imgDesk);
+  background-size: cover;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  width: 50%;
+}
+
+.head {
+  font-display: 49px;
+  font-size: 11px;
+  color: var(--DarkGrayishBlue);
+  letter-spacing: 5px;
+  font-weight: 500;
+}
+
+.principal {
+  font-family: "Fraunces", serif;
+  color: var(--VeryDarkBlue);
+  font-size: 28px;
+  line-height: 25px;
+}
+
+.resum {
+  color: var(--DarkGrayishBlue);
+  font-size: 12px;
+  font-weight: 500;
+}
+
+.prices {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 15px;
+}
+
+.priceDesc {
+  font-family: "Fraunces", serif;
+  color: var(--DarkCyan);
+}
+
+.oldPrice {
+  font-size: 10px;
+  color: var(--DarkGrayishBlue);
+  text-decoration: line-through;
+}
+
+.addCart {
+  margin-top: 10px;
+  background: var(--DarkCyan);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px;
+  border-radius: 5px;
+  font-size: 12px;
+  color: var(--White);
+  font-weight: 500;
+}
+
+.addCart:hover {
+  background: var(--VeryDarkBlue);
+}
+
+.addCart img {
+  height: 12px;
+}
+
+@media (max-width: 768px) {
+  .card {
+    flex-direction: column;
+    width: 300px;
+    height: 550px;
+  }
+  .image {
+    border-radius: 10px 10px 0 0;
+    height: 40%;
+    width: 100%;
+    background-image: var(--imgMob);
+    background-size: cover;
+  }
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 60%;
+    padding: 30px;
+    width: 80%;
+  }
+  .principal {
+    font-family: "Fraunces", serif;
+    color: var(--VeryDarkBlue);
+    font-size: 25px;
+    line-height: 22px;
+  }
+}
